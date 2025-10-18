@@ -1,6 +1,7 @@
-## ☕ Méthodes Utiles en Java
+# ☕ Méthodes Utiles en Java
 
-### 🔡 La classe `String`
+## 🔡 La classe `String`
+
 La classe `String` est utilisée pour manipuler les chaînes de caractères. Elles sont **immuables** (non modifiables).
 
 - `int length()` : Retourne la longueur de la chaîne.
@@ -17,7 +18,8 @@ La classe `String` est utilisée pour manipuler les chaînes de caractères. Ell
 - `String[] split(String regex)` : Découpe la chaîne selon une expression régulière.
 - `static String valueOf(...)` : Convertit une valeur (entier, caractère, booléen) en chaîne.
 
-### ✍️ Les classes `StringBuffer` et `StringBuilder`
+## ✍️ Les classes `StringBuffer` et `StringBuilder`
+
 Ces classes permettent de créer des chaînes de caractères **modifiables**, utiles pour des constructions complexes.
 
 - `append(...)` : Ajoute du contenu à la fin.
@@ -25,7 +27,8 @@ Ces classes permettent de créer des chaînes de caractères **modifiables**, ut
 - `deleteCharAt(int index)` : Supprime le caractère à une position donnée.
 - `replace(int start, int end, String str)` : Remplace une portion de la chaîne.
 
-### 🔢 La classe `Integer`
+## 🔢 La classe `Integer`
+
 Classe "enveloppe" (wrapper) pour le type primitif `int`.
 
 - `Integer(int value)` : Constructeur (obsolète, préférer `valueOf`).
@@ -34,23 +37,27 @@ Classe "enveloppe" (wrapper) pour le type primitif `int`.
 - `int intValue()` : Retourne la valeur `int` de l'objet.
 - `static int parseInt(String s)` : Convertit une chaîne en entier signé.
 
-### ⌨️ La classe `java.util.Scanner`
+## ⌨️ La classe `java.util.Scanner`
+
 Utilisée pour lire des entrées depuis diverses sources (console, fichier, chaîne).
 
 **Méthodes de lecture :**
+
 - `public String nextLine()`
 - `public String next()`
 - `public int nextInt()`
 - `public double nextDouble()`
 
 **Méthodes pour tester l'existence d'une entrée :**
+
 - `public boolean hasNextLine()`
 - `public boolean hasNext()`
 - `public boolean hasNextInt()`
 - `public boolean hasNextDouble()`
 - `public boolean hasNextLong()`
 
-### 🗃️ La classe `Arrays`
+## 🗃️ La classe `Arrays`
+
 Contient des méthodes utilitaires pour manipuler les tableaux.
 
 - `public static int[] copyOf(int[] original, int newLength)`
@@ -60,7 +67,8 @@ Contient des méthodes utilitaires pour manipuler les tableaux.
 - `public static String toString(int[] a)` : Produit une représentation textuelle du tableau.
 - `public static String deepToString(Object[] a)` : Idem pour les tableaux d'objets.
 
-### 🌍 La classe `Object`
+## 🌍 La classe `Object`
+
 La super-classe de toutes les classes en Java. Chaque objet hérite de ses méthodes.
 
 - `public boolean equals(Object o)` : Souvent redéfinie pour comparer les valeurs et non les références.

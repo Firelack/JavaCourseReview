@@ -8,7 +8,7 @@ Ce tableau récapitule qui peut accéder à un membre (attribut ou méthode) en 
 |:------------|:-----------:|:------------:|:----------------------:|:--------:|
 | `public`    |      ✅      |      ✅       |           ✅            |    ✅     |
 | `protected` |      ✅      |      ✅       |           ✅            |    ❌     |
-| *(default)* |      ✅      |      ✅       |           ❌            |    ❌     |
+| *(default)* |      ✅      |      ✅       |   ❌ (sauf si même package)   |    ❌     |
 | `private`   |      ✅      |      ❌       |           ❌            |    ❌     |
 
 ---
@@ -45,8 +45,9 @@ L'héritage permet à une classe (la **sous-classe** ou classe "fille") d'acqué
 ➡️ **On utilise le mot-clé `extends`** pour établir cette relation.
 
 Le mot-clé `super` est utilisé depuis la sous-classe pour faire référence à sa super-classe :
--   `super(arguments)` : Appelle le **constructeur** de la super-classe. Doit être la toute première instruction du constructeur de la sous-classe.
--   `super.methode()` : Appelle une **méthode** de la super-classe.
+
+- `super(arguments)` : Appelle le **constructeur** de la super-classe. Doit être la toute première instruction du constructeur de la sous-classe.
+- `super.methode()` : Appelle une **méthode** de la super-classe.
 
 C'est un mécanisme puissant pour réutiliser du code et créer des hiérarchies d'objets logiques (ex: `lesBases.Etudiant` est une `lesBases.Personne`).
 
@@ -58,12 +59,13 @@ Le polymorphisme permet de manipuler un objet d'une sous-classe à travers une r
 
 `superClasse variable = new sousClasse();`
 
--   Cela s'appelle l'**upcasting** (transtypage vers le haut), et c'est automatique en Java.
--   La `variable` est de type `superClasse`, donc on ne peut appeler que les méthodes définies dans `superClasse`, même si l'objet réel est une `sousClasse`.
+- Cela s'appelle l'**upcasting** (transtypage vers le haut), et c'est automatique en Java.
+- La `variable` est de type `superClasse`, donc on ne peut appeler que les méthodes définies dans `superClasse`, même si l'objet réel est une `sousClasse`.
 
 Pour vérifier le type réel d'un objet et accéder aux méthodes de la sous-classe, on utilise :
--   **`instanceof`** : L'opérateur `variable instanceof Classe` renvoie `true` si l'objet est une instance de `Classe` (ou d'une de ses sous-classes).
--   **Transtypage explicite (downcasting)** : Si on est certain du type, on peut forcer la conversion : `sousClasse var2 = (sousClasse) variable;`. Il est plus sûr de toujours le faire après une vérification avec `instanceof`.
+
+- **`instanceof`** : L'opérateur `variable instanceof Classe` renvoie `true` si l'objet est une instance de `Classe` (ou d'une de ses sous-classes).
+- **Transtypage explicite (downcasting)** : Si on est certain du type, on peut forcer la conversion : `sousClasse var2 = (sousClasse) variable;`. Il est plus sûr de toujours le faire après une vérification avec `instanceof`.
 
 ---
 
@@ -73,8 +75,9 @@ Une classe abstraite est une classe qu’on ne peut pas instancier directement.
 ➡️ **Elle sert de modèle commun** à plusieurs sous-classes.
 
 Elle peut contenir :
--   Des méthodes normales (avec un corps).
--   Des méthodes **abstraites** (sans corps, qui doivent obligatoirement être redéfinies dans les classes filles).
+
+- Des méthodes normales (avec un corps).
+- Des méthodes **abstraites** (sans corps, qui doivent obligatoirement être redéfinies dans les classes filles).
 
 👉 C’est un concept à mi-chemin entre une classe normale et une interface.
 
