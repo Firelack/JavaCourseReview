@@ -8,6 +8,13 @@ L'objectif principal est de centraliser les notions fondamentales de la POO en J
 
 ---
 
+## 🍎 NotesToDo
+
+- [x] Ajouter la création et la lecture d'un scanner.
+- [ ] Ajouter les interfaces et le cours d'après
+
+---
+
 ## 📂 Structure du Projet
 
 Le projet est organisé en plusieurs packages pour séparer les différents concepts abordés :

@@ -10,4 +10,8 @@ public class Chien extends Animal {
     public void parler() {
         System.out.println(nom + " dit : Ouaf !");
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + " Chien{}"; }
 }

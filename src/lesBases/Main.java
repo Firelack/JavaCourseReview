@@ -1,5 +1,7 @@
 package lesBases;// Fichier lesBases.Main.java
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -129,5 +131,13 @@ public class Main {
             Etudiant etu = (Etudiant) p;
             System.out.println("Transtypage objet réussi : " + etu.getFiliere());
         }
+
+        // --- Scanner (entrée utilisateur) ---
+        System.out.println("\n--- Scanner (entrée utilisateur) ---");
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Entrez une valeur : ");
+        int valeurInt = sc.nextInt();
+        System.out.println("Vous avez saisi : " + valeurInt);
+        sc.close();
     }
 }

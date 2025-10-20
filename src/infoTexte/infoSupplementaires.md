@@ -97,3 +97,13 @@ Elle peut contenir :
 | **Booléen**   | `boolean` |       1       | `true`        | Valeur logique `true` ou `false`.                         |
 | **Texte**     | `String`  |       -       | `"Bonjour"`   | Chaîne de caractères (c'est une classe, pas un primitif). |
 | **Autres**    | Objets    |       -       | `new Point()` | Toute instance créée à partir d'une classe.               |
+
+---
+
+## 🍎 Les Annotations (`@...`)
+
+Les annotations fournissent des informations sur le code au compilateur ou à l'environnement d'exécution. Elles ne modifient pas directement l'exécution du code.
+
+| Annotation | Rôle et Explication |
+|:--- |:---|
+| **`@Override`** | Indique au compilateur que la méthode qui suit **doit redéfinir** une méthode de sa super-classe (ou implémenter une méthode d'une interface). C'est une sécurité essentielle : si tu te trompes dans le nom ou les paramètres, le compilateur signalera une erreur. |
