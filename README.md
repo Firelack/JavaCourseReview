@@ -11,6 +11,7 @@ L'objectif principal est de centraliser les notions fondamentales de la POO en J
 ## 🍎 NotesToDo
 
 - [x] Ajouter la création et la lecture d'un scanner.
+- [ ] Ajouter les imports des classes méthodes
 - [ ] Ajouter les interfaces et le cours d'après
 
 ---
