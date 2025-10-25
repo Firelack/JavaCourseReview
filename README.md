@@ -6,12 +6,28 @@ Ce projet regroupe un ensemble de notes, de fiches de révision et d'exemples de
 
 L'objectif principal est de centraliser les notions fondamentales de la POO en Java à travers des exemples pratiques et des fiches synthétiques. Le code est volontairement commenté et structuré pour faciliter la compréhension.
 
+Chapitres :
+
+1. Introduction à la POO, bases
+2. Objets et classes
+3. Héritages
+
+    *Pas encore abordé dans ce projet :*
+4. Interfaces
+5. Généricité
+6. Classes internes
+7. Exceptions
+8. Bibliothèques de collections
+
 ---
 
 ## 🍎 NotesToDo
 
-- [x] Ajouter la création et la lecture d'un scanner.
-- [ ] Ajouter les interfaces et le cours d'après
+- [ ] Ajouter les interfaces (chap 4)
+- [ ] Ajouter la généricité (chap 5)
+- [ ] Ajouter les classes internes (chap 6)
+- [ ] Ajouter les exceptions (chap 7)
+- [ ] Ajouter les bibliothèques des collections java (chap 8)
 
 ---
 
