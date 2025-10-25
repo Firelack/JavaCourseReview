@@ -23,6 +23,7 @@ Chapitres :
 
 ## 🍎 NotesToDo
 
+- [ ] Ajouter les imports des classes méthodes
 - [ ] Ajouter les interfaces (chap 4)
 - [ ] Ajouter la généricité (chap 5)
 - [ ] Ajouter les classes internes (chap 6)
