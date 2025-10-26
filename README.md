@@ -6,14 +6,14 @@ Ce projet regroupe un ensemble de notes, de fiches de révision et d'exemples de
 
 L'objectif principal est de centraliser les notions fondamentales de la POO en Java à travers des exemples pratiques et des fiches synthétiques. Le code est volontairement commenté et structuré pour faciliter la compréhension.
 
-Chapitres :
+## 📚 Chapitres
 
 1. Introduction à la POO, bases
 2. Objets et classes
 3. Héritages
+4. Interfaces
 
     *Pas encore abordé dans ce projet :*
-4. Interfaces
 5. Généricité
 6. Classes internes
 7. Exceptions
@@ -23,8 +23,8 @@ Chapitres :
 
 ## 🍎 NotesToDo
 
-- [ ] Ajouter les imports des classes méthodes
-- [ ] Ajouter les interfaces (chap 4)
+- [x] Ajouter les imports des classes méthodes
+- [x] Ajouter les interfaces (chap 4)
 - [ ] Ajouter la généricité (chap 5)
 - [ ] Ajouter les classes internes (chap 6)
 - [ ] Ajouter les exceptions (chap 7)
@@ -45,8 +45,14 @@ Le projet est organisé en plusieurs packages pour séparer les différents conc
     - `Animal.java` : Une classe abstraite servant de modèle.
     - `Chien.java` et `Chat.java` : Des classes concrètes qui héritent d'`Animal`.
     - `Main.java` : Montre l'utilisation du polymorphisme avec des classes abstraites.
+  - **`/lesInterfaces`** : Un cas pratique sur les interfaces.
+    - `Reparable.java` : Une interface avec une méthode abstraite.
+    - `Ravitaillable.java` : Une autre interface avec une méthode abstraite.
+    - `Voiture.java` : Une classe qui implémente `Reparable.java` et `Ravitaillable.java`
+    - `Velo.java` : Une classe qui implémente `Reparable.java`.
+    - `Main.java` : Montre l'utilisation des interfaces.
 - **`/infoTexte`** : Contient les fiches de révision au format Markdown.
-  - `infoSupplementaires.md` : Fiche sur les concepts clés (visibilité, mots-clés, héritage, polymorphisme).
+  - `infoSupplementaires.md` : Fiche sur les concepts clés (visibilité, mots-clés, héritage, polymorphisme, etc.).
   - `classesMethodes.md` : Fiche récapitulative des méthodes utiles des classes standards de Java (`String`, `Scanner`, `Arrays`, etc.).
 
 ---
@@ -76,4 +82,4 @@ Ce projet couvre les notions suivantes :
 2. **Ouvrir dans un IDE** :
     Ouvrez le projet dans un IDE Java comme IntelliJ IDEA ou Eclipse.
 3. **Exécuter le code** :
-    Chaque package (`lesBases` et `classeAbstraite`) contient son propre fichier `Main.java` qui peut être exécuté indépendamment pour tester les concepts qui lui sont associés.
+    Chaque package (`lesBases` et `classeAbstraite`, etc.) contient son propre fichier `Main.java` qui peut être exécuté indépendamment pour tester les concepts qui lui sont associés.

@@ -29,6 +29,7 @@ Ce tableau récapitule qui peut accéder à un membre (attribut ou méthode) en 
 | `extends`                          | Indique l'héritage d'une classe.                       |
 | `abstract`                         | Utilisé pour les classes et méthodes abstraites.       |
 | `interface`                        | Définit un contrat de méthodes à implémenter.          |
+| `implements`                       | Implémente une interface.                              |
 
 ---
 
@@ -107,3 +108,27 @@ Les annotations fournissent des informations sur le code au compilateur ou à l'
 | Annotation | Rôle et Explication |
 |:--- |:---|
 | **`@Override`** | Indique au compilateur que la méthode qui suit **doit redéfinir** une méthode de sa super-classe (ou implémenter une méthode d'une interface). C'est une sécurité essentielle : si tu te trompes dans le nom ou les paramètres, le compilateur signalera une erreur. |
+
+---
+
+## 📜 Interfaces (Contrats)
+
+Une interface est un **contrat** qui définit un ensemble de méthodes (et/ou constantes) qu'une classe doit implémenter.
+
+- **Mots-clés :** On déclare une `interface` et une classe l'`implements`.
+- **Héritage multiple :** Une classe ne peut `extends` qu'une seule super-classe, mais peut `implements` **plusieurs** interfaces.
+- **Contenu :**
+  - Traditionnellement : Uniquement des méthodes abstraites (sans corps) et des constantes (`static final`).
+  - Depuis Java 8 : Peut aussi contenir des méthodes `default` (avec un corps, qui peut être redéfini) et des méthodes `static`.
+- **Polymorphisme :** On peut utiliser une interface comme un type, tout comme une classe (ex: `List<String> maListe = new ArrayList<>();` où `List` est une interface).
+- **But :**
+  1. **Ajouter des capacités** à une classe (ex: `Comparable`, `Runnable`).
+  2. **Définir un type abstrait** (ex: `Pile`) pour séparer l'utilisation de l'implémentation.
+
+| Différence | Classe Abstraite (`abstract class`) | Interface (`interface`) |
+|:---|:---|:---|
+| **Héritage** | Une classe ne peut en `extends` qu'une seule. | Une classe peut en `implements` plusieurs. |
+| **Attributs** | Peut avoir tous types d'attributs (instance, static...). | Ne peut avoir que des constantes (`static final`). |
+| **Constructeur** | Possède un constructeur (appelé par `super()`). | N'a **pas** de constructeur. |
+| **Méthodes** | Peut mélanger méthodes abstraites et concrètes. | Principalement des méthodes abstraites (et `default` / `static` depuis Java 8). |
+| **But** | Modéliser un lien "**est un**" (un `Chien` **est un** `Animal`). | Modéliser une capacité "**peut faire**" (une `Voiture` **peut** `Rouler`). |

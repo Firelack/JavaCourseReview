@@ -2,6 +2,8 @@
 
 ## 🔡 La classe `String`
 
+📞 Fait partie de java.lang (aucun import requis)
+
 La classe `String` est utilisée pour manipuler les chaînes de caractères. Elles sont **immuables** (non modifiables).
 
 - `int length()` : Retourne la longueur de la chaîne.
@@ -20,6 +22,8 @@ La classe `String` est utilisée pour manipuler les chaînes de caractères. Ell
 
 ## ✍️ Les classes `StringBuffer` et `StringBuilder`
 
+📞 Font partie de java.lang (aucun import requis)
+
 Ces classes permettent de créer des chaînes de caractères **modifiables**, utiles pour des constructions complexes.
 
 - `append(...)` : Ajoute du contenu à la fin.
@@ -28,6 +32,8 @@ Ces classes permettent de créer des chaînes de caractères **modifiables**, ut
 - `replace(int start, int end, String str)` : Remplace une portion de la chaîne.
 
 ## 🔢 La classe `Integer`
+
+📞 Fait partie de java.lang (aucun import requis)
 
 Classe "enveloppe" (wrapper) pour le type primitif `int`.
 
@@ -38,6 +44,8 @@ Classe "enveloppe" (wrapper) pour le type primitif `int`.
 - `static int parseInt(String s)` : Convertit une chaîne en entier signé.
 
 ## ⌨️ La classe `java.util.Scanner`
+
+📞 import java.utils.Scanner;
 
 Utilisée pour lire des entrées depuis diverses sources (console, fichier, chaîne).
 
@@ -58,6 +66,8 @@ Utilisée pour lire des entrées depuis diverses sources (console, fichier, cha�
 
 ## 🗃️ La classe `Arrays`
 
+📞 import java.util.Arrays
+
 Contient des méthodes utilitaires pour manipuler les tableaux.
 
 - `public static int[] copyOf(int[] original, int newLength)`
@@ -68,6 +78,8 @@ Contient des méthodes utilitaires pour manipuler les tableaux.
 - `public static String deepToString(Object[] a)` : Idem pour les tableaux d'objets.
 
 ## 🌍 La classe `Object`
+
+📞 Fait partie de java.lang (aucun import requis)
 
 La super-classe de toutes les classes en Java. Chaque objet hérite de ses méthodes.
 
