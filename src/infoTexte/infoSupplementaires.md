@@ -132,3 +132,24 @@ Une interface est un **contrat** qui définit un ensemble de méthodes (et/ou co
 | **Constructeur** | Possède un constructeur (appelé par `super()`). | N'a **pas** de constructeur. |
 | **Méthodes** | Peut mélanger méthodes abstraites et concrètes. | Principalement des méthodes abstraites (et `default` / `static` depuis Java 8). |
 | **But** | Modéliser un lien "**est un**" (un `Chien` **est un** `Animal`). | Modéliser une capacité "**peut faire**" (une `Voiture` **peut** `Rouler`). |
+
+---
+
+## 🧬 Généricité (\<T>)
+
+La généricité permet de créer des classes, interfaces et méthodes qui fonctionnent avec n'importe quel type de données de manière sécurisée. On utilise des paramètres de type (ex: `<T>`, `<E>`, `<K, V>`).
+
+- **But :** Écrire du code réutilisable tout en garantissant la **sécurité de type à la compilation**.
+- **Avant (l'ancienne méthode) :** On utilisait `Object`.
+  - *Inconvénient :* Nécessite un **transtypage (cast)** manuel et risqué.
+  - *Inconvénient :* **Aucune sécurité**. On peut mélanger des types incompatibles, et l'erreur n'est détectée qu'à l'**exécution**.
+- **Maintenant (avec `<T>`) :** On spécifie le type à l'instanciation : `Paire<String> p = new Paire<String>(...)` .
+  - *Avantage :* **Plus de cast** nécessaire.
+  - *Avantage :* **Sécurité de type**. Le compilateur détecte les erreurs (ex: `p.setSecond(12)`) à la **compilation**.
+
+### Contraintes (Bornes)
+
+On peut forcer un type générique à hériter d'une classe ou implémenter une interface avec le mot-clé `extends`.
+
+- `public class MaClasse<T extends Number>` : `T` doit être un `Integer`, `Double`, etc.
+- `public <T extends Comparable<T>> T max(T[] tab)` : `T` doit être un type "comparable" (qui implémente `Comparable`).

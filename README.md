@@ -12,9 +12,9 @@ L'objectif principal est de centraliser les notions fondamentales de la POO en J
 2. Objets et classes
 3. Héritages
 4. Interfaces
-
-    *Pas encore abordé dans ce projet :*
 5. Généricité
+
+   *Pas encore abordé dans ce projet :*
 6. Classes internes
 7. Exceptions
 8. Bibliothèques de collections
@@ -25,7 +25,7 @@ L'objectif principal est de centraliser les notions fondamentales de la POO en J
 
 - [x] Ajouter les imports des classes méthodes
 - [x] Ajouter les interfaces (chap 4)
-- [ ] Ajouter la généricité (chap 5)
+- [x] Ajouter la généricité (chap 5)
 - [ ] Ajouter les classes internes (chap 6)
 - [ ] Ajouter les exceptions (chap 7)
 - [ ] Ajouter les bibliothèques des collections java (chap 8)
@@ -51,9 +51,13 @@ Le projet est organisé en plusieurs packages pour séparer les différents conc
     - `Voiture.java` : Une classe qui implémente `Reparable.java` et `Ravitaillable.java`
     - `Velo.java` : Une classe qui implémente `Reparable.java`.
     - `Main.java` : Montre l'utilisation des interfaces.
-- **`/infoTexte`** : Contient les fiches de révision au format Markdown.
-  - `infoSupplementaires.md` : Fiche sur les concepts clés (visibilité, mots-clés, héritage, polymorphisme, etc.).
-  - `classesMethodes.md` : Fiche récapitulative des méthodes utiles des classes standards de Java (`String`, `Scanner`, `Arrays`, etc.).
+  - **`/genericite`** : Un cas pratique sur la généricité.
+    - `Boite.java` : Une classe 'conteneur' générique simple `<T>`.
+    - `Stagiaire.java` : Une classe d'exemple qui implémente `Comparable` pour le test de contrainte.
+    - `Main.java` : Démontre l'utilisation de la classe `Boite<T>` et d'une méthode générique avec contrainte.
+  - **`/infoTexte`** : Contient les fiches de révision au format Markdown.
+    - `infoSupplementaires.md` : Fiche sur les concepts clés (visibilité, mots-clés, héritage, polymorphisme, etc.).
+    - `classesMethodes.md` : Fiche récapitulative des méthodes utiles des classes standards de Java (`String`, `Scanner`, `Arrays`, etc.).
 
 ---
 
@@ -68,6 +72,7 @@ Ce projet couvre les notions suivantes :
 - **Abstraction** : Création et utilisation de classes et méthodes abstraites.
 - **Membres `static`** : Attributs et méthodes appartenant à la classe plutôt qu'aux instances.
 - **Bases de Java** : Boucles (`for`, `while`), tableaux, `switch`, opérateurs, etc.
+- **Interfaces** : Création et utilisation d'interfaces.
 
 ---
 
