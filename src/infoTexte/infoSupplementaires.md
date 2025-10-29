@@ -153,3 +153,27 @@ On peut forcer un type générique à hériter d'une classe ou implémenter une 
 
 - `public class MaClasse<T extends Number>` : `T` doit être un `Integer`, `Double`, etc.
 - `public <T extends Comparable<T>> T max(T[] tab)` : `T` doit être un type "comparable" (qui implémente `Comparable`).
+
+---
+
+## 🧱 Classes Internes
+
+Une classe interne est une classe définie à l'intérieur d'une autre classe.
+
+- **Intérêt principal :** Encapsulation renforcée (cacher la classe) et accès aux membres privés de la classe externe.
+
+Il existe 4 types principaux :
+
+| Type | Description | Point Clé |
+|:---|:---|:---|
+| **Classe Interne** | `class B { ... }` | Liée à une instance. Accède à **tous** les membres de l'objet externe. |
+| **Classe Interne Statique** | `static class B { ... }` | Non liée à une instance. Accède **uniquement aux membres statiques** de la classe externe. |
+| **Classe Interne Locale** | Définie dans une méthode. | Portée limitée à la méthode. Peut accéder aux variables locales `final`. |
+| **Classe Interne Anonyme** | `new Interface() { ... };` | Classe locale sans nom, pour un usage unique. Très utilisée pour implémenter des interfaces "à la volée" (ex: `Comparator`). |
+
+**Lien avec les Expressions Lambda (`->`)**
+Une classe anonyme implémentant une **interface fonctionnelle** (une seule méthode abstraite, ex: `Comparator`, `Predicate`) est l'ancêtre d'une expression lambda.
+
+`Arrays.sort(tab, (s1, s2) -> s1.length() - s2.length());`
+... est le raccourci syntaxique de :
+`Arrays.sort(tab, new Comparator<String>() { public int compare(...) { ... } });`

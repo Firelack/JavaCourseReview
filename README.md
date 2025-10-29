@@ -13,9 +13,9 @@ L'objectif principal est de centraliser les notions fondamentales de la POO en J
 3. Héritages
 4. Interfaces
 5. Généricité
+6. Classes internes
 
    *Pas encore abordé dans ce projet :*
-6. Classes internes
 7. Exceptions
 8. Bibliothèques de collections
 
@@ -26,7 +26,7 @@ L'objectif principal est de centraliser les notions fondamentales de la POO en J
 - [x] Ajouter les imports des classes méthodes
 - [x] Ajouter les interfaces (chap 4)
 - [x] Ajouter la généricité (chap 5)
-- [ ] Ajouter les classes internes (chap 6)
+- [x] Ajouter les classes internes (chap 6)
 - [ ] Ajouter les exceptions (chap 7)
 - [ ] Ajouter les bibliothèques des collections java (chap 8)
 
@@ -55,6 +55,10 @@ Le projet est organisé en plusieurs packages pour séparer les différents conc
     - `Boite.java` : Une classe 'conteneur' générique simple `<T>`.
     - `Stagiaire.java` : Une classe d'exemple qui implémente `Comparable` pour le test de contrainte.
     - `Main.java` : Démontre l'utilisation de la classe `Boite<T>` et d'une méthode générique avec contrainte.
+  - **`/classesInternes`** : Un cas pratique sur les classes internes.
+    - `ClasseExterne.java` : Exemple de classe interne non-statique.
+    - `GestionCoordonnees.java` : Exemple de classe interne statique privée.
+    - `Main.java` : Démontre l'utilisation des classes internes, anonymes et des expressions lambda.
   - **`/infoTexte`** : Contient les fiches de révision au format Markdown.
     - `infoSupplementaires.md` : Fiche sur les concepts clés (visibilité, mots-clés, héritage, polymorphisme, etc.).
     - `classesMethodes.md` : Fiche récapitulative des méthodes utiles des classes standards de Java (`String`, `Scanner`, `Arrays`, etc.).
@@ -73,6 +77,8 @@ Ce projet couvre les notions suivantes :
 - **Membres `static`** : Attributs et méthodes appartenant à la classe plutôt qu'aux instances.
 - **Bases de Java** : Boucles (`for`, `while`), tableaux, `switch`, opérateurs, etc.
 - **Interfaces** : Création et utilisation d'interfaces.
+- **Généricité** : Utilisation de la généricité
+- **Classes internes** : Création et utilisation de classes internes.
 
 ---
 
