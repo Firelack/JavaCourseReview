@@ -14,9 +14,9 @@ L'objectif principal est de centraliser les notions fondamentales de la POO en J
 4. Interfaces
 5. Généricité
 6. Classes internes
+7. Exceptions
 
    *Pas encore abordé dans ce projet :*
-7. Exceptions
 8. Bibliothèques de collections
 
 ---
@@ -27,7 +27,7 @@ L'objectif principal est de centraliser les notions fondamentales de la POO en J
 - [x] Ajouter les interfaces (chap 4)
 - [x] Ajouter la généricité (chap 5)
 - [x] Ajouter les classes internes (chap 6)
-- [ ] Ajouter les exceptions (chap 7)
+- [x] Ajouter les exceptions (chap 7)
 - [ ] Ajouter les bibliothèques des collections java (chap 8)
 
 ---
@@ -59,6 +59,10 @@ Le projet est organisé en plusieurs packages pour séparer les différents conc
     - `ClasseExterne.java` : Exemple de classe interne non-statique.
     - `GestionCoordonnees.java` : Exemple de classe interne statique privée.
     - `Main.java` : Démontre l'utilisation des classes internes, anonymes et des expressions lambda.
+  - **`/exceptions`** : Un cas pratique sur les exceptions.
+    - `DebitImpossibleException.java` : Une exception "checked" personnalisée.
+    - `Compte.java` : Une classe qui utilise `throw` et `throws`.
+    - `Main.java` : Démontre l'utilisation de `try-catch` pour gérer les erreurs.
   - **`/infoTexte`** : Contient les fiches de révision au format Markdown.
     - `infoSupplementaires.md` : Fiche sur les concepts clés (visibilité, mots-clés, héritage, polymorphisme, etc.).
     - `classesMethodes.md` : Fiche récapitulative des méthodes utiles des classes standards de Java (`String`, `Scanner`, `Arrays`, etc.).

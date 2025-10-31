@@ -177,3 +177,29 @@ Une classe anonyme implémentant une **interface fonctionnelle** (une seule mét
 `Arrays.sort(tab, (s1, s2) -> s1.length() - s2.length());`
 ... est le raccourci syntaxique de :
 `Arrays.sort(tab, new Comparator<String>() { public int compare(...) { ... } });`
+
+---
+
+## 💣 Gestion des Exceptions
+
+Une exception est une erreur qui survient à l'exécution. La gestion des exceptions permet de "capturer" ces erreurs pour éviter que le programme ne plante.
+
+### Hiérarchie des Erreurs
+
+- **`Throwable`** : La classe mère de tout ce qui peut être "lancé".
+  - **`Error`** : Erreur fatale (ex: `OutOfMemoryError`). On ne les gère pas.
+  - **`Exception`** : Erreur "normale" que l'on peut gérer.
+    - **Exceptions "Checked" (sous contrôle)** : Erreurs externes (ex: `IOException`, `FileNotFoundException`). Le compilateur **oblige** à les gérer (avec `try-catch` ou `throws`).
+    - **`RuntimeException` ("Unchecked", hors contrôle)** : Erreurs de programmation (ex: `NullPointerException`, `IllegalArgumentException`, `ArithmeticException`). Le compilateur n'oblige pas à les gérer (car on devrait les éviter).
+
+### Les 3 Mots-Clés
+
+| Mot-clé | Rôle | Utilisation |
+|:---|:---|:---|
+| **`try-catch-finally`** | **GÉRER** | `try { ...code risqué... } catch (ExceptionType e) { ...plan B... } finally { ...nettoyage... }` |
+| **`throw`** | **LEVER** | Lancer manuellement une nouvelle exception : `throw new IllegalArgumentException("Valeur invalide");` |
+| **`throws`** | **RELEVER** | Prévenir qu'une méthode peut lancer une exception *checked* : `public void maMethode() throws IOException { ... }` |
+
+**Bloc `finally`** : S'exécute **toujours**, qu'il y ait eu une exception ou non. Idéal pour fermer des ressources (fichiers, scanners, etc.).
+
+**Exceptions Personnalisées** : On peut créer ses propres classes (ex: `class MonException extends Exception`) pour gérer des erreurs métiers spécifiques (ex: `DebitImpossibleException`).
