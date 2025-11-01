@@ -88,3 +88,14 @@ La super-classe de toutes les classes en Java. Chaque objet hérite de ses méth
 - `public final Class getClass()`
 - `public int hashCode()`
 - `public String toString()` : Souvent redéfinie pour un affichage personnalisé.
+
+## 🔧 La classe utilitaire `Collections`
+
+📞 import java.util.Collections;
+
+C'est une classe avec des méthodes `static` pour manipuler les collections (à ne pas confondre avec l'interface `Collection`).
+
+- `Collections.sort(maListe);` : Trie une liste.
+- `Collections.reverse(maListe);` : Inverse une liste.
+- `Collections.shuffle(maListe);` : Mélange une liste.
+- `Collections.min(maListe);` / `Collections.max(maListe);` : Trouve le min/max.

@@ -15,22 +15,7 @@ L'objectif principal est de centraliser les notions fondamentales de la POO en J
 5. Généricité
 6. Classes internes
 7. Exceptions
-
-   *Pas encore abordé dans ce projet :*
 8. Bibliothèques de collections
-
----
-
-## 🍎 NotesToDo
-
-- [x] Ajouter les imports des classes méthodes
-- [x] Ajouter les interfaces (chap 4)
-- [x] Ajouter la généricité (chap 5)
-- [x] Ajouter les classes internes (chap 6)
-- [x] Ajouter les exceptions (chap 7)
-- [ ] Ajouter les bibliothèques des collections java (chap 8)
-
----
 
 ## 📂 Structure du Projet
 
@@ -63,11 +48,11 @@ Le projet est organisé en plusieurs packages pour séparer les différents conc
     - `DebitImpossibleException.java` : Une exception "checked" personnalisée.
     - `Compte.java` : Une classe qui utilise `throw` et `throws`.
     - `Main.java` : Démontre l'utilisation de `try-catch` pour gérer les erreurs.
+  - **`/collections`** : Un cas pratique sur les collections.
+    - `Main.java` : Démontre l'utilisation de `List`, `Set` et `Map` et de la classe `Collections`.
   - **`/infoTexte`** : Contient les fiches de révision au format Markdown.
     - `infoSupplementaires.md` : Fiche sur les concepts clés (visibilité, mots-clés, héritage, polymorphisme, etc.).
     - `classesMethodes.md` : Fiche récapitulative des méthodes utiles des classes standards de Java (`String`, `Scanner`, `Arrays`, etc.).
-
----
 
 ## 💡 Concepts Abordés
 
@@ -83,8 +68,8 @@ Ce projet couvre les notions suivantes :
 - **Interfaces** : Création et utilisation d'interfaces.
 - **Généricité** : Utilisation de la généricité
 - **Classes internes** : Création et utilisation de classes internes.
-
----
+- **Exceptions** : Gestion des exceptions et des erreurs.
+- **Collections** : Utilistation des collections
 
 ## 🚀 Comment Utiliser
 
@@ -97,4 +82,4 @@ Ce projet couvre les notions suivantes :
 2. **Ouvrir dans un IDE** :
     Ouvrez le projet dans un IDE Java comme IntelliJ IDEA ou Eclipse.
 3. **Exécuter le code** :
-    Chaque package (`lesBases` et `classeAbstraite`, etc.) contient son propre fichier `Main.java` qui peut être exécuté indépendamment pour tester les concepts qui lui sont associés.
+    Chaque package (`lesBases` et `classeAbstraite`, etc.) contient son propre fichier `Main.java` qui peut être exécuté indépendamment pour tester les concepts qui lui sont associés. Ce dossier contient également un dossier infoTexte qui contient des fichiers de texte sur les notions et choses à retenir.

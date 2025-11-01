@@ -203,3 +203,33 @@ Une exception est une erreur qui survient à l'exécution. La gestion des except
 **Bloc `finally`** : S'exécute **toujours**, qu'il y ait eu une exception ou non. Idéal pour fermer des ressources (fichiers, scanners, etc.).
 
 **Exceptions Personnalisées** : On peut créer ses propres classes (ex: `class MonException extends Exception`) pour gérer des erreurs métiers spécifiques (ex: `DebitImpossibleException`).
+
+---
+
+## 📚 Bibliothèques de Collections
+
+Les collections sont des objets qui regroupent d'autres objets. Elles utilisent la **généricité** et sont basées sur des **interfaces** (le "quoi") et des **classes d'implémentation** (le "comment").
+
+Les 2 interfaces principales sont `Collection<E>` (un "sac" d'éléments) et `Map<K, V>` (un dictionnaire clé-valeur) .
+
+### Interfaces et Implémentations Courantes
+
+| Interface | Implémentation | Description | Points Clés |
+|:---|:---|:---|:---|
+| **`List<E>`** | `ArrayList<E>` | Liste basée sur un tableau dynamique. | Ordonnée, accepte doublons. **Rapide pour `get(index)`**. |
+| | `LinkedList<E>` | Liste basée sur des maillons (chaînée). | Ordonnée, accepte doublons. **Rapide pour `add`/`remove`**. |
+| **`Set<E>`** | `HashSet<E>` | Ensemble basé sur table de hachage. | **Pas de doublons**. Non ordonné. **Très rapide (`add`/`contains`)**. |
+| | `TreeSet<E>` | Ensemble basé sur un arbre. | **Pas de doublons**. **Garde les éléments triés**. |
+| **`Map<K, V>`** | `HashMap<K, V>` | Dictionnaire (clé-valeur) basé sur table de hachage. | Clés uniques. Non ordonné. **Très rapide (`put`/`get`)**. |
+| | `TreeMap<K, V>` | Dictionnaire (clé-valeur) basé sur un arbre. | Clés uniques. **Garde les clés triées**. |
+
+### Parcourir les Collections
+
+La façon la plus simple est la boucle `for-each` (qui fonctionne sur tout ce qui hérite de `Collection`).
+`for (String s : maListe) { ... }`
+
+Pour les `Map`, on parcourt les clés, les valeurs, ou les deux :
+
+- `for (String cle : maMap.keySet()) { ... }` (parcourir les clés)
+- `for (Integer val : maMap.values()) { ... }` (parcourir les valeurs)
+- `for (Map.Entry<String, Integer> entree : maMap.entrySet()) { entree.getKey(); entree.getValue(); }` (parcourir les paires)
