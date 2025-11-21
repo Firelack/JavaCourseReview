@@ -233,3 +233,36 @@ Pour les `Map`, on parcourt les clés, les valeurs, ou les deux :
 - `for (String cle : maMap.keySet()) { ... }` (parcourir les clés)
 - `for (Integer val : maMap.values()) { ... }` (parcourir les valeurs)
 - `for (Map.Entry<String, Integer> entree : maMap.entrySet()) { entree.getKey(); entree.getValue(); }` (parcourir les paires)
+
+---
+
+## 🧩 Expressions Régulières (Regex)
+
+Les expressions régulières permettent de vérifier si une chaîne de caractères respecte un certain **format** (motif).
+
+En Java, on utilise souvent la méthode statique :
+`boolean estValide = java.util.regex.Pattern.matches("regex", maChaine);`
+
+### Explication du pattern `"[+-]?\\d+"` (vu en cours)
+
+C'est le motif classique pour vérifier si une chaîne est un **nombre entier** (positif ou négatif).
+
+| Symbole | Signification |
+|:--- |:---|
+| `[` ... `]` | **Classe de caractères** : L'un des caractères à l'intérieur. |
+| `+` `-` | Les caractères littéraux `+` et `-`. |
+| `?` | **Quantificateur** : "Zéro ou une fois" (Optionnel). |
+| `\\d` | **Digit** : Un chiffre (0 à 9). *(Note : On double le `\` en Java pour l'échapper)*. |
+| `+` | **Quantificateur** : "Une ou plusieurs fois". |
+
+**Traduction complète :**
+> *"Cherche un signe (+ ou -) optionnel, suivi obligatoirement d'un ou plusieurs chiffres."*
+
+### Exemple d'utilisation
+
+```java
+String s = "-123";
+if (java.util.regex.Pattern.matches("[+-]?\\d+", s)) {
+    int i = Integer.parseInt(s); // Sûr à 100%, pas d'exception
+}
+```
